@@ -10,5 +10,6 @@
         <item>Transition Anim</item>
         <item>View State</item>
         <item>Vector Anim</item>
+        <item>MotionLayout Anim</item>
     </string-array>
 </resources>

@@ -26,6 +26,17 @@
             android:name="com.ocnyang.revealanimation.RevealEffectActivity"
             android:label="Reveal Effect">
         </activity>
+        <activity
+            android:name=".ConstraintAnimationActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|mcc|mnc"
+            android:label="ConstraintAnimation">
+        </activity>
+
+        <activity
+            android:name=".MotionAnimationActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|keyboard|keyboardHidden|mcc|mnc"
+            android:label="MotionAnimation">
+        </activity>
     </application>
 
 </manifest>

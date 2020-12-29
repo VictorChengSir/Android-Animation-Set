@@ -3,9 +3,10 @@ package com.ocnyang.androidanimationset;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.util.Pair;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -82,7 +83,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                         mContext.startActivity(new Intent(mContext, RevealAnimationActivity.class));
                         break;
                     case 5:
-                        ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(((MainActivity) mContext), null);
+                        ActivityOptionsCompat activityOptionsCompat = ActivityOptionsCompat.makeSceneTransitionAnimation(((MainActivity) mContext), (Pair<View, String>) null);
                         Intent intent = new Intent(mContext, TransitionAnimationActivity.class);
                         mContext.startActivity(intent, activityOptionsCompat.toBundle());
                         break;
@@ -92,6 +93,8 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAd
                     case 7:
                         mContext.startActivity(new Intent(mContext, VectorAnimationActivity.class));
                         break;
+                    case 8:
+                        mContext.startActivity(new Intent(mContext, ConstraintAnimationActivity.class));
                     default:
                         break;
                 }
